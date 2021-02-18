@@ -61,11 +61,11 @@ class App extends Component {
           />
           <Route 
             path='/list'
-            component={(props) => <List {...props} items={Items}/>}
+            render={(props) => <List {...props} items={Items}/>}
           />
           <Route 
             path='/list/:list_id'
-            component={(props) => <ListMain {...props} items={Items}/>}
+            render={(props) => <ListMain {...props} items={Items}/>}
           />
           <Route 
             path='/about'
@@ -73,7 +73,7 @@ class App extends Component {
           />
           <Route 
             path='/add-item'
-            component={(props) => <AddItem {...props} addItems={() => addItems()} items={Items}/>}
+            render={(props) => <AddItem {...props} addItems={() => addItems()} items={Items}/>}
           />
         </main>
       </div>
