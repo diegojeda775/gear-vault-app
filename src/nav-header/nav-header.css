@@ -1,0 +1,40 @@
+.app-header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #24252A;
+    
+}
+
+.app-title{
+    /* flex: 2; */
+    flex-grow: 2;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.app-nav{
+    /* flex: 1; */
+    flex-shrink: 0;
+}
+
+h3{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+h1{
+    padding: 0px 20px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: #edf0f1;
+    transition: all 0.3s ease 0s;
+}
+
+.app-nav a:hover{
+    color: #0088a9
+}
