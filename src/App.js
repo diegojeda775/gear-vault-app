@@ -60,10 +60,12 @@ class App extends Component {
             component={Instructions}
           />
           <Route 
+            exact
             path='/list'
             render={(props) => <List {...props} items={Items}/>}
           />
           <Route 
+            exact
             path='/list/:list_id'
             render={(props) => <ListMain {...props} items={Items}/>}
           />
@@ -73,7 +75,7 @@ class App extends Component {
           />
           <Route 
             path='/add-item'
-            render={(props) => <AddItem {...props} addItems={() => addItems()} lth={Items.length}/>}
+            render={(props) => <AddItem {...props} addItems={addItems} lth={Items.length}/>}
           />
         </main>
       </div>

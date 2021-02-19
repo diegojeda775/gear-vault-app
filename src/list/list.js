@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './list.css';
 
 export default class List extends Component {
 
-    // handleList = list =>{
-    //     return 
-    // }
+  
     render() {
         return (
             <div className='list'>
@@ -19,24 +18,20 @@ export default class List extends Component {
 
                 <div className='list-items'>
                     <ul>
-                        {this.props.items.map(item => {
-                                if(item.id%2 === 0){
-                                    return(
+                        {this.props.items.map((item, i) => {
+                                return(
+                                    <div key={i} className='list-div'>
+                                        <hr />
                                         <li key={item.id} className='list-item-dark'>
-                                            <p>{item.name}</p>
+                                            <Link to={`/list/${item.id}`}>
+                                                <p>{item.name}</p>
+                                            </Link>
                                             <p>{item.brand}</p>
-                                            <p>{item.price}</p>
+                                            <p>$ {item.price}</p>
                                         </li>
-                                    )
-                                }else{
-                                    return(
-                                        <li key={item.id} className='list-item-light'>
-                                            <p>{item.name}</p>
-                                            <p>{item.brand}</p>
-                                            <p>{item.price}</p>
-                                        </li>
-                                    )
-                                }
+                                    </div>
+                                )
+                                
                             }
                         )}
                     </ul>

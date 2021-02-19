@@ -1,0 +1,36 @@
+li {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    border-left: 0px;
+
+}
+.list-div{
+    text-align: center;
+    justify-content: center;                                    
+    padding-left: 0%;
+    padding-left: 0px;
+    margin-left: 0px;
+    border-left: 0px;
+}
+
+.list-items{
+    padding-left: 0px;
+    margin-left: 0px;
+    border-left: 0px;
+}
+
+.list{
+    padding-left: 0px;
+    margin-left: 0px;
+    border-left: 0px;
+}
+
+a{
+    transition: all 0.3s ease 0s;
+}
+
+
+a:hover{
+    color: #0088a9
+}
