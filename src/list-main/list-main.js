@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default class ListMain extends Component {
 
     render() {
-        const { list_id } = this.props.match.params || 1;
+        const { list_id } = this.props.match.params;
         const item = this.props.items.find(it => it.id == list_id)         
         return (
             <div className='item-main'>
