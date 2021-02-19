@@ -5,7 +5,7 @@ export default class Instructions extends Component {
     render() {
         return (
             <div>
-                 <h4>Wellcome to Gear Vault</h4>
+                 <h4>Welcome to Gear Vault</h4>
 
                  <h6>
                     This is an web-app where you can keep information of your equipment/gear for tracking or insurance purposes!
