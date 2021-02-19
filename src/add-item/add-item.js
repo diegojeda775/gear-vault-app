@@ -4,7 +4,7 @@ export default class AddItem extends Component {
     constructor(props){
         super(props)
         this.state = {
-            
+            id: null,
             name: null,
             brand: null,
             serial_number: null,
@@ -17,9 +17,9 @@ export default class AddItem extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        const createdId = this.props.items.length + 1;
+        
         const newItem = {
-            id: createdId,
+            id: this.state.id,
             name: this.state.name,
             brand: this.state.brand,
             serial_number: this.state.serial_number,
@@ -37,15 +37,23 @@ export default class AddItem extends Component {
     }
 
     handleChange = e => {
+        e.preventDefault()
         this.setState({
             [e.target.name]: e.target.value
+        })
+    }
+
+    componentDidMount(){
+        const createdId = this.props.lth + 1;
+        this.setState({
+            id: createdId
         })
     }
 
     render() {
         return (
             <div>
-                <form onClick={this.handleSubmit}> 
+                <form onSubmit={this.handleSubmit}> 
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" onChange={this.handleChange}/>
                     <br />
@@ -65,7 +73,7 @@ export default class AddItem extends Component {
                     <input type="text" id="place" name="purchase_place" onChange={this.handleChange}/>
                 </form>
                 <div>
-                    <button type='submit'>Save</button>
+                    <button type='submit' onClick={this.handleSubmit}>Save</button>
                     <button onClick={this.goList}>Cancel</button>
                 </div>
             </div>

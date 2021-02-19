@@ -73,7 +73,7 @@ class App extends Component {
           />
           <Route 
             path='/add-item'
-            render={(props) => <AddItem {...props} addItems={() => addItems()} items={Items}/>}
+            render={(props) => <AddItem {...props} addItems={() => addItems()} lth={Items.length}/>}
           />
         </main>
       </div>
