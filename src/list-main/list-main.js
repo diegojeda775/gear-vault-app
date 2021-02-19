@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export default class ListMain extends Component {
@@ -14,7 +15,13 @@ export default class ListMain extends Component {
                 <h5>Serial Num: {item.serial_number}</h5>
                 <h5>Purchase Date: {item.purchase_date}</h5>
                 <h5>Purchase Place: {item.purchase_place}</h5>
+                <div className='list-back-button'>
+                    <Link to='/list'>
+                        <button>Back</button>
+                    </Link>
+                </div>
             </div>
+            
         )
     }
 }
