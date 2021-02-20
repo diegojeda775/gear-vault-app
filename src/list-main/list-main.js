@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import itemsContext from '../items-context';
 
 
 export default class ListMain extends Component {
+    
+    static contextType = itemsContext
 
     render() {
         const { list_id } = this.props.match.params;
-        const item = this.props.items.find(it => it.id == list_id)         
+        const item = this.context.items.find(it => it.id == list_id) || { content: ''}        
         return (
             <div className='item-main'>
                 <h4>{item.name}</h4>

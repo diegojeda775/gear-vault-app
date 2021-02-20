@@ -34,3 +34,7 @@ a{
 a:hover{
     color: #0088a9
 }
+
+.list-ul{
+    padding-left: 0px;
+}

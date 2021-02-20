@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import itemsContext from '../items-context';
 import './list.css';
 
 export default class List extends Component {
 
+    static contextType = itemsContext
   
     render() {
         return (
@@ -17,19 +19,19 @@ export default class List extends Component {
                 </header>
 
                 <div className='list-items'>
-                    <ul>
-                        {this.props.items.map((item, i) => {
+                    <ul className='list-ul'>
+                        {this.context.items.map((item, i) => {
                                 return(
-                                    <div key={i} className='list-div'>
-                                        <hr />
-                                        <li key={item.id} className='list-item-dark'>
-                                            <Link to={`/list/${item.id}`}>
+                                    <Link key={i} to={`/list/${item.id}`}>
+                                        <div key={item.id} className='list-div'>
+                                            <hr />
+                                            <li className='list-item-dark'>
                                                 <p>{item.name}</p>
-                                            </Link>
-                                            <p>{item.brand}</p>
-                                            <p>$ {item.price}</p>
-                                        </li>
-                                    </div>
+                                                <p>{item.brand}</p>
+                                                <p>${item.price}</p>
+                                            </li>
+                                        </div>
+                                    </Link>
                                 )
                                 
                             }
