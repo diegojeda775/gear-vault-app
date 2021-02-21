@@ -32,8 +32,14 @@ class App extends Component {
         return res.json()
       })
       .then(res => {
+        const items = res.map(r => {
+          return {
+            ...r,
+            purchase_date: new Date(r.purchase_date).toLocaleDateString()
+          }
+        })
         this.setState({
-          items: res
+          items: items
         })
       })
       .catch(error => {

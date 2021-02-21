@@ -1,15 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
-import App from './App'
+import AddItem from './add-item'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <BrowserRouter>
-      <App />
+      <AddItem />
     </BrowserRouter>,
     div
   )
+
+expect(div.querySelector('label').textContent).toBe('Name')
+
   ReactDOM.unmountComponentAtNode(div)
 })

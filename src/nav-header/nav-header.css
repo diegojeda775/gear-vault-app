@@ -11,7 +11,7 @@
     /* flex: 2; */
     flex-grow: 2;
     align-self: flex-start;
-    text-align: left;
+    text-align: center;
 }
 
 .app-nav{
@@ -37,4 +37,10 @@ a{
 
 .app-nav a:hover{
     color: #0088a9
+}
+
+@media only screen and (min-width: 768px){
+    .app-title{
+        text-align: left;
+    }
 }

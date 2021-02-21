@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './instructions.css'
 
 export default class Instructions extends Component {
     render() {
@@ -27,7 +28,7 @@ export default class Instructions extends Component {
                 </h6>
 
                 <Link to='/list'>
-                    <button>Go to List</button>
+                    <button className="start-button">Go to List</button>
                 </Link>
 
             </div>

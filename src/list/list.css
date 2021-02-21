@@ -1,40 +1,41 @@
 li {
     list-style: none;
-    padding-left: 0px;
-    margin-left: 0px;
-    border-left: 0px;
-
 }
+
 .list-div{
     text-align: center;
     justify-content: center;                                    
-    padding-left: 0%;
-    padding-left: 0px;
-    margin-left: 0px;
-    border-left: 0px;
-}
-
-.list-items{
-    padding-left: 0px;
-    margin-left: 0px;
-    border-left: 0px;
-}
-
-.list{
-    padding-left: 0px;
-    margin-left: 0px;
-    border-left: 0px;
-}
-
-a{
+    border: 2px solid #edf0f1;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 25px;
     transition: all 0.3s ease 0s;
 }
 
-
-a:hover{
-    color: #0088a9
+.list-div:hover{
+    color: #0088a9;
+    border-color: #0088a9;
 }
 
 .list-ul{
-    padding-left: 0px;
+    padding: 0px;
+    margin: 10%;
+    align-content: center;
+}
+
+button{
+    color: #edf0f1;
+    background: none;
+    border-radius: 25px;
+    border-color: #edf0f1;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.list-add-button{
+    padding: 5px;
+}
+
+.list-add-button:hover{
+    background-color: #0088a9;
 }

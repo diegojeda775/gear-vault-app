@@ -1,0 +1,21 @@
+.list-buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.list-back-button{
+    margin: 10px;
+}
+
+.list-delete-button{
+    margin: 10px;
+}
+
+.btn-back:hover{
+    background-color: #0088a9;
+}
+
+.btn-del:hover{
+    background-color: crimson;
+}
