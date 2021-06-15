@@ -2,6 +2,8 @@ Gear Vault App
 
 Live App: https://gear-vault-app.vercel.app/
 
+Backend: https://github.com/diegojeda775/gear-vault-server
+
 Api/items: With this endpont, the client is able to get a list of items from the database and add items to it as well.
 
 Api/items/:item_id: Whit this enpoint, the client is able to delete items from the database as well as getting the information from a specific item.
